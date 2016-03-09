@@ -45,3 +45,4 @@ def ConvertAllImagesTo(path, new_ext):
 					os.remove(tif_path)
 
 ConvertAllImagesTo('export', 'jpg')
+
