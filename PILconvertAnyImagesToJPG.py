@@ -10,8 +10,8 @@ def image_post_open(filename):
     with open(filename, "rb") as f:
         try:
             im = Image.open(f)
-        except Exception as e:
-            print type(e), e
+        except Exception as err:
+            print type(err), err
             return False
         else:
             im.load()
