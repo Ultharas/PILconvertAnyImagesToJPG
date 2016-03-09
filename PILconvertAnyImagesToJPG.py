@@ -40,8 +40,8 @@ def ConvertAllImagesTo(new_ext):
 
                 try:
                     im.save(save_img_path)
-                except Exception as e:
-                    print type(e), e
+                except Exception as err:
+                    print type(err), err
                 else:
                     os.remove(image_path)
 
