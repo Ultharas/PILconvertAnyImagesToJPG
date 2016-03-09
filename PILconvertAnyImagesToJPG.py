@@ -36,14 +36,13 @@ def ConvertAllImagesTo(new_ext):
                 if im.mode == "CMYK":
                     im = im.convert("RGB")
 
-                save_img_path = os.path.join('export', re.sub('[^\.]+$', new_ext, image_path))
-                print save_img_path
-                sys.exit()
+                save_img_path = os.path.join('export', re.sub('[^\.]+$', new_ext, image))
+
                 try:
                     im.save(save_img_path)
                 except Exception as e:
                     print type(e), e
                 else:
-                    os.remove(tif_path)
+                    os.remove(image_path)
 
 ConvertAllImagesTo('jpg')
